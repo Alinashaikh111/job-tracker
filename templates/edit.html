@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Application</title>
+</head>
+
+<body>
+
+    <h1>Edit Application</h1>
+
+    <form action="/edit/{{ application['id'] }}" method="POST">
+
+        <input type="text"
+               name="company"
+               value="{{ application['company'] }}"
+               required>
+
+        <input type="text"
+               name="role"
+               value="{{ application['role'] }}"
+               required>
+
+        <input type="text"
+               name="location"
+               value="{{ application['location'] }}"
+               required>
+
+        <select name="status">
+            <option value="Applied">Applied</option>
+            <option value="Interview">Interview</option>
+            <option value="Selected">Selected</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+
+        <button type="submit">Save Changes</button>
+
+    </form>
+
+    <a href="/">Back</a>
+
+</body>
+
+</html>
